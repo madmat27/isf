@@ -1,16 +1,16 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 from __future__ import print_function
 
 import argparse
 import logging.handlers
 import os
-import ConfigParser
+import configparser
 from icssploit.interpreter import IcssploitInterpreter
 
 # Define conf
 isf_conf_file = "isf.ini"
-isf_conf = ConfigParser.SafeConfigParser(allow_no_value=True)
+isf_conf = configparser.ConfigParser(allow_no_value=True)
 isf_conf.read(isf_conf_file)
 
 # Get parameter from conf

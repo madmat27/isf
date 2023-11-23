@@ -83,7 +83,7 @@ class BaseInterpreter(object):
         printer_queue.join()
         while True:
             try:
-                command, args = self.parse_line(raw_input(self.prompt))
+                command, args = self.parse_line(input(self.prompt))
                 if not command:
                     continue
                 command_handler = self.get_command_handler(command)
